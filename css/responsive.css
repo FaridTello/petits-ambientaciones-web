@@ -1,0 +1,15 @@
+/* responsive.css — Ajustes para celular (se carga último para pisar a los demás). */
+
+/* ===== Celular ===== */
+@media (max-width:860px){
+  .menu-btn{display:block}
+  .nav ul{position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;gap:0;display:none;box-shadow:var(--sombra)}
+  .nav ul.abierto{display:flex}
+  .nav ul a{display:block;padding:16px 20px;border-top:1px solid #f3eccc}
+  .hero .wrap,.bienvenidos,.grid-contacto,.rol-grid{grid-template-columns:1fr}
+  .hero-foto{width:100%;max-width:420px;margin:0 auto}
+  .grid-serv .serv{max-width:none}
+  .grid-gal{grid-template-columns:repeat(2,1fr)}
+  .section{padding:60px 0}
+  .fila{grid-template-columns:1fr}
+}

@@ -1,0 +1,9 @@
+# Notas internas del proyecto (no se publican)
+PLAN.md
+LEEME.md
+
+# Sistema y editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/

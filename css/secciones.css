@@ -1,0 +1,78 @@
+/* secciones.css — Estilos de cada sección de la página. */
+
+/* ===== Bienvenidos ===== */
+.bienvenidos{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.bienvenidos img{border-radius:var(--radio);aspect-ratio:4/3;object-fit:cover;box-shadow:var(--sombra)}
+.datos{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap}
+.dato b{display:block;font-family:"Rubik",system-ui,sans-serif;font-size:1.6rem;color:var(--naranja)}
+.dato span{font-size:.9rem;color:var(--gris)}
+/* ===== Servicios ===== */
+.servicios{background:var(--crema-suave)}
+.grid-serv{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;margin-top:40px}
+.grid-serv .serv{flex:1 1 300px;max-width:350px}
+.serv{background:#fff;border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column}
+.serv img{aspect-ratio:16/10;object-fit:cover}
+.serv div{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.serv h3{font-size:1.3rem}
+.serv p{color:var(--gris);flex:1}
+.serv a{font-family:"Rubik",system-ui,sans-serif;font-weight:700;color:var(--naranja);text-decoration:none}
+/* ===== Catálogo ===== */
+.filtros{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:34px 0}
+.filtros button{font-family:"Rubik",system-ui,sans-serif;font-weight:700;border:2px solid var(--oscuro);background:#fff;color:var(--oscuro);
+                padding:.55em 1.2em;border-radius:999px;cursor:pointer;font-size:.95rem}
+.filtros button.activo{background:var(--oscuro);color:#fff}
+.grid-cat{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px}
+.prod{background:#fff;border:2px solid #f3e7b5;border-radius:var(--radio);overflow:hidden;display:flex;flex-direction:column;transition:transform .15s}
+.prod:hover{transform:translateY(-4px);box-shadow:var(--sombra)}
+.prod-img{position:relative}
+.prod-img img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.edad{position:absolute;top:12px;left:12px;background:var(--amarillo);font-weight:700;font-size:.8rem;padding:.3em .8em;border-radius:999px}
+.prod-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.prod h3{font-size:1.25rem;color:var(--naranja)}
+.prod ul{list-style:none;font-size:.93rem;color:var(--gris)}
+.prod li::before{content:"• ";color:var(--amarillo);font-weight:800}
+.prod-pie{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:10px;border-top:1px dashed #eadfb0}
+.precio{font-family:"Rubik",system-ui,sans-serif;font-weight:800;font-size:1.15rem}
+.precio small{font-family:"Nunito",system-ui,sans-serif;font-weight:600;font-size:.75rem;color:var(--gris)}
+.prod-pie a{font-family:"Rubik",system-ui,sans-serif;font-weight:700;font-size:.9rem;text-decoration:none;background:var(--crema);padding:.5em 1em;border-radius:999px;white-space:nowrap}
+.nota-cat{text-align:center;color:var(--gris);font-size:.9rem;margin-top:26px}
+/* ===== Galería ===== */
+.galeria{background:var(--oscuro);color:#fff}
+.galeria .lead{color:#cfcbe0}
+.grid-gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+.grid-gal img,.grid-gal video{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px}
+/* ===== Condiciones ===== */
+.grid-cond{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:36px}
+.cond{background:var(--crema-suave);border-radius:var(--radio);padding:24px}
+.cond h3{font-size:1.1rem;margin-bottom:8px}
+.cond p,.cond li{font-size:.95rem;color:var(--gris)}
+.cond ul{padding-left:18px}
+/* ===== Contacto ===== */
+.contacto{background:var(--crema)}
+.grid-contacto{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;margin-top:36px}
+.canales{display:flex;flex-direction:column;gap:14px}
+.canal{display:flex;align-items:center;gap:14px;background:#fff;border-radius:18px;padding:16px 20px;text-decoration:none;font-weight:700}
+.canal svg{width:34px;height:34px;flex-shrink:0}
+.canal small{display:block;font-weight:400;color:var(--gris)}
+form{background:#fff;border-radius:var(--radio);padding:28px;box-shadow:var(--sombra);display:grid;gap:14px}
+label{font-weight:700;font-size:.9rem;display:grid;gap:6px}
+input,textarea,select{font:inherit;border:2px solid #eadfb0;border-radius:12px;padding:.7em .9em;background:#fffdf5;color:var(--oscuro)}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--naranja)}
+.fila{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#form-estado{font-weight:700;font-size:.95rem}
+.mapa{width:100%;height:260px;border:0;border-radius:18px;background:#fff}
+
+/* Producto sin foto */
+.sin-foto{aspect-ratio:4/3;background:var(--crema-suave);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--gris);font-weight:700;font-size:.9rem}
+.sin-foto img{width:90px;height:90px;opacity:.85}
+.cod{font-size:.75rem;font-weight:700;color:var(--gris);letter-spacing:.04em}
+
+/* ROL Eventos */
+.rol{background:var(--crema-suave)}
+.rol-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.rol-foto{position:relative;border-radius:var(--radio);aspect-ratio:4/5;max-height:620px;overflow:hidden;box-shadow:var(--sombra);width:100%;background:#fff}
+.rol-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease}
+.rol-foto img.activa{opacity:1}
+.rol-logo{width:110px;height:110px;border-radius:50%;margin-bottom:14px;box-shadow:var(--sombra)}
+.rol-servicios{font-family:"Rubik",system-ui,sans-serif;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem;margin:14px 0 22px}
+.rol-btns{display:flex;flex-wrap:wrap;gap:12px}

@@ -1,0 +1,32 @@
+/* base.css — Variables de marca, reset, tipografía y componentes reutilizables (botones, títulos). */
+
+/* ===== Colores de marca (sacados del catálogo) ===== */
+:root{
+  --crema:#FFEB99;      /* fondo del catálogo */
+  --crema-suave:#FFF6D6;
+  --naranja:#FF751F;    /* títulos */
+  --amarillo:#FBC926;   /* logo */
+  --oscuro:#312D43;     /* logo y textos */
+  --blanco:#FFFFFF;
+  --gris:#6B6780;
+  --radio:22px;
+  --sombra:0 10px 30px rgba(49,45,67,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:"Nunito",system-ui,sans-serif;color:var(--oscuro);background:var(--blanco);line-height:1.6;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Rubik",sans-serif;line-height:1.1}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.section{padding:80px 0}
+.kicker{font-family:"Rubik",system-ui,sans-serif;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;color:var(--naranja)}
+.title{font-size:clamp(2rem,5vw,3rem);font-weight:800;margin:.3em 0 .4em}
+.lead{color:var(--gris);max-width:620px}
+.center{text-align:center}.center .lead{margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:.5em;font-family:"Rubik",system-ui,sans-serif;font-weight:700;text-decoration:none;border:0;cursor:pointer;
+     padding:.9em 1.6em;border-radius:999px;font-size:1rem;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--sombra)}
+.btn-naranja{background:var(--naranja);color:#fff}
+.btn-oscuro{background:var(--oscuro);color:#fff}
+.btn-linea{background:transparent;border:2px solid var(--oscuro);color:var(--oscuro)}
