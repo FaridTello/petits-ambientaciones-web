@@ -1,56 +1,58 @@
-# Petits Ambientaciones — Sitio web
+# Petits Ambientaciones — Website
 
-Sitio web para **Petits Ambientaciones**, un emprendimiento de Tigre (Buenos Aires) que alquila juegos y mobiliario para cumpleaños infantiles.
+Website for **Petits Ambientaciones**, a small business in Tigre (Buenos Aires, Argentina) that rents play equipment and furniture for children's parties.
 
-🔗 **En línea:** [petitsambientaciones.com.ar](https://petitsambientaciones.com.ar)
+🔗 **Live:** [petitsambientaciones.com.ar](https://petitsambientaciones.com.ar)
 
-Proyecto freelance real: relevamiento con el cliente, desarrollo, puesta en línea con dominio propio y dos rondas de cambios.
+Real freelance project: requirements gathering with the client, development, deployment on a custom domain, and post-launch changes.
 
-## Qué tiene
-- Catálogo de productos con filtros por categoría, generado desde un archivo de datos.
-- Botones "Consultar" que llevan al formulario de contacto con el producto ya cargado.
-- Formulario de contacto que envía sin recargar la página (Formspree, con `fetch`).
-- Carruseles de fotos reutilizables, galería con video y mapa de ubicación.
-- Diseño adaptado a celular.
-- Medición para Google Ads con Google Tag Manager (evento `form_enviado` en el `dataLayer`).
+> The site content is in Spanish because it targets local customers.
 
-## Tecnologías
-- HTML, CSS y JavaScript sin frameworks, con **ES Modules**.
-- Hosting en **Cloudflare** con dominio `.com.ar` delegado desde NIC Argentina y redirección de `www` (301).
+## Features
+- Product catalog with category filters, rendered from a data file.
+- "Consultar" (inquire) buttons that scroll to the contact form with the product already filled in.
+- Contact form that submits without reloading the page (Formspree, using `fetch`).
+- Reusable photo carousels, gallery with video, and location map.
+- Responsive, mobile-first design.
+- Google Ads conversion tracking with Google Tag Manager (`form_enviado` event pushed to the `dataLayer`).
 
-## Estructura
-El código está separado por responsabilidad: los datos, la vista y la lógica no se mezclan.
+## Tech stack
+- HTML, CSS and vanilla JavaScript with **ES Modules** (no frameworks).
+- Hosted on **Cloudflare**, with a `.com.ar` domain delegated from NIC Argentina and a `www` → root redirect (301).
+
+## Project structure
+The code is split by responsibility: data, view and logic are kept separate.
 
 ```
-├── index.html            Estructura (HTML semántico)
+├── index.html            Structure (semantic HTML)
 ├── css/
-│   ├── base.css          Variables de marca, reset, tipografía, botones
-│   ├── layout.css        Header, portada, footer, botón flotante
-│   ├── secciones.css     Estilos de cada sección
-│   └── responsive.css    Ajustes para celular
+│   ├── base.css          Brand variables, reset, typography, buttons
+│   ├── layout.css        Header, hero, footer, floating button
+│   ├── secciones.css     Section styles
+│   └── responsive.css    Mobile adjustments
 ├── js/
-│   ├── main.js           Punto de entrada: inicializa los módulos
-│   ├── config.js         Datos del negocio (contacto, fotos de los carruseles)
-│   ├── data/productos.js Catálogo (datos separados de la vista)
-│   ├── utils.js          Funciones puras reutilizables
-│   ├── catalogo.js       Filtros y render de tarjetas
-│   ├── contacto.js       Links de contacto y envío del formulario
-│   ├── carrusel.js       Carrusel reutilizable
-│   ├── rol.js            Sección de la empresa asociada
-│   └── ui.js             Menú del celular y footer
-└── img/                  Fotos y logos
+│   ├── main.js           Entry point: initializes the modules
+│   ├── config.js         Business data (contact info, carousel photos)
+│   ├── data/productos.js Catalog data (separated from the view)
+│   ├── utils.js          Reusable pure functions
+│   ├── catalogo.js       Filters and product card rendering
+│   ├── contacto.js       Contact links and form submission
+│   ├── carrusel.js       Reusable carousel
+│   ├── rol.js            Partner company section
+│   └── ui.js             Mobile menu and footer
+└── img/                  Photos and logos
 ```
 
-## Cómo verlo en local
-Como usa módulos (`import`/`export`), no funciona abriendo `index.html` con doble clic. Hace falta un servidor local:
+## Run locally
+Since it uses ES Modules (`import`/`export`), opening `index.html` directly won't work. Serve it with a local server:
 
 ```bash
 python -m http.server 8000
 ```
 
-y abrir `http://localhost:8000` (o usar la extensión *Live Server* de VS Code).
+then open `http://localhost:8000` (or use the *Live Server* extension in VS Code).
 
-## Autor
-Desarrollado por **Leonardo Farid Tello Moscoso**, estudiante de la Tecnicatura Universitaria en Programación (UTN FRGP).
+## Author
+Built by **Leonardo Farid Tello Moscoso**, student of the Programming Technical Degree (Tecnicatura Universitaria en Programación) at UTN FRGP.
 
-Las fotos, logos y textos pertenecen a Petits Ambientaciones y se incluyen solo para mostrar el proyecto.
+Photos, logos and texts belong to Petits Ambientaciones and are included only to showcase the project.
