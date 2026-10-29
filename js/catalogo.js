@@ -25,7 +25,7 @@ function precioHTML(p) {
 
 function imagenHTML(p) {
   if (!p.img) {
-    return `<div class="sin-foto"><img src="img/logo-sello.png" alt="Petits Ambientaciones"></div>`;
+    return `<div class="sin-foto"><img src="img/logo-sello.webp" alt="Petits Ambientaciones"></div>`;
   }
   return `<img src="img/${p.img}" alt="${p.nombre}" loading="lazy">`;
 }

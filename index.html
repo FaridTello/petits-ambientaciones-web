@@ -13,13 +13,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Petits Ambientaciones · Alquiler de juegos y ambientación para cumpleaños infantiles</title>
 <meta name="description" content="Alquiler de peloteros, plazas blandas, inflables y mobiliario infantil para cumpleaños, bautismos y comuniones en Tigre y zona norte. Llevamos, armamos y retiramos todo.">
 <link rel="icon" href="img/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/portada.webp" fetchpriority="high">
+<!-- Fuentes propias: se piden temprano las dos que se ven primero -->
+<link rel="preload" as="font" type="font/woff2" href="fonts/rubik-latin-800-normal.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/nunito-latin-700-normal.woff2" crossorigin>
+<link rel="stylesheet" href="css/fuentes.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/layout.css">
 <link rel="stylesheet" href="css/secciones.css">
 <link rel="stylesheet" href="css/responsive.css">
+<!-- Módulos JS: se piden todos juntos en vez de en cadena -->
+<link rel="modulepreload" href="js/main.js">
+<link rel="modulepreload" href="js/ui.js">
+<link rel="modulepreload" href="js/catalogo.js">
+<link rel="modulepreload" href="js/contacto.js">
+<link rel="modulepreload" href="js/carrusel.js">
+<link rel="modulepreload" href="js/rol.js">
+<link rel="modulepreload" href="js/config.js">
+<link rel="modulepreload" href="js/utils.js">
+<link rel="modulepreload" href="js/data/productos.js">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -30,7 +42,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ================= HEADER ================= -->
 <header>
   <div class="wrap nav">
-    <a href="#inicio"><img src="img/logo.png" alt="Petits Ambientaciones"></a>
+    <a href="#inicio"><img src="img/logo.webp" alt="Petits Ambientaciones" width="300" height="262"></a>
     <button class="menu-btn" aria-label="Abrir menú"><span></span><span></span><span></span></button>
     <ul id="menu">
       <li><a href="#inicio">Inicio</a></li>
@@ -56,8 +68,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <!-- Carrusel de portada: las fotos se cambian en js/config.js (fotosPortada) -->
     <div class="hero-foto">
-      <div class="carrusel" id="carrusel" aria-label="Fotos de espacios armados"></div>
-      <img class="sello" src="img/logo-sello.png" alt="">
+      <div class="carrusel" id="carrusel" aria-label="Fotos de espacios armados"><img src="img/portada.webp" alt="Espacio de juegos armado por Petits" class="activa" width="600" height="800" fetchpriority="high"></div>
+      <img class="sello" src="img/logo-sello.webp" alt="" width="300" height="300">
     </div>
   </div>
 </section>
@@ -65,7 +77,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ================= BIENVENIDOS ================= -->
 <section class="section">
   <div class="wrap bienvenidos">
-    <img src="img/combo-a.jpg" alt="Combo plaza blanda con pelotero">
+    <img src="img/combo-a.webp" alt="Combo plaza blanda con pelotero" width="700" height="933" loading="lazy">
     <div>
       <span class="kicker">¡Bienvenidos!</span>
       <h2 class="title">Espacios pensados para que los chicos jueguen</h2>
@@ -87,11 +99,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="title">¿Qué necesitás para tu evento?</h2>
     <p class="lead">Elegí lo que necesitás para tu cumpleaños. Todo se puede personalizar con nombre, dibujos y globos.</p>
     <div class="grid-serv" style="text-align:left">
-      <div class="serv"><img src="img/pelotero-2x2.jpg" alt=""><div><h3>Peloteros</h3><p>Para que los chicos jueguen y se diviertan.</p><a href="#catalogo" data-filtro="Peloteros">Ver peloteros →</a></div></div>
-      <div class="serv"><img src="img/plaza-juegos.jpg" alt=""><div><h3>Plazas blandas</h3><p>Para bebés y niños pequeños.</p><a href="#catalogo" data-filtro="Plazas">Ver plazas →</a></div></div>
-      <div class="serv"><img src="img/inflable-b.jpg" alt=""><div><h3>Inflables</h3><p>Diversión para todas las edades.</p><a href="#catalogo" data-filtro="Inflables">Ver inflables →</a></div></div>
-      <div class="serv"><img src="img/mob-premium.jpg" alt=""><div><h3>Mobiliario infantil</h3><p>Mesas, sillas y complementos.</p><a href="#catalogo" data-filtro="Mobiliario">Ver mobiliario →</a></div></div>
-      <div class="serv"><img src="img/ambientacion.jpg" alt=""><div><h3>Ambientación</h3><p>Decoración y detalles para completar el evento.</p><a href="#catalogo" data-filtro="Ambientación">Ver más →</a></div></div>
+      <div class="serv"><img src="img/pelotero-2x2.webp" alt="" width="700" height="933" loading="lazy"><div><h3>Peloteros</h3><p>Para que los chicos jueguen y se diviertan.</p><a href="#catalogo" data-filtro="Peloteros">Ver peloteros →</a></div></div>
+      <div class="serv"><img src="img/plaza-juegos.webp" alt="" width="700" height="933" loading="lazy"><div><h3>Plazas blandas</h3><p>Para bebés y niños pequeños.</p><a href="#catalogo" data-filtro="Plazas">Ver plazas →</a></div></div>
+      <div class="serv"><img src="img/inflable-b.webp" alt="" width="700" height="706" loading="lazy"><div><h3>Inflables</h3><p>Diversión para todas las edades.</p><a href="#catalogo" data-filtro="Inflables">Ver inflables →</a></div></div>
+      <div class="serv"><img src="img/mob-premium.webp" alt="" width="700" height="933" loading="lazy"><div><h3>Mobiliario infantil</h3><p>Mesas, sillas y complementos.</p><a href="#catalogo" data-filtro="Mobiliario">Ver mobiliario →</a></div></div>
+      <div class="serv"><img src="img/ambientacion.webp" alt="" width="700" height="933" loading="lazy"><div><h3>Ambientación</h3><p>Decoración y detalles para completar el evento.</p><a href="#catalogo" data-filtro="Ambientación">Ver más →</a></div></div>
     </div>
   </div>
 </section>
@@ -117,14 +129,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="title">Cada evento es único</h2>
     <p class="lead">Algunos de los espacios que armamos.</p>
     <div class="grid-gal">
-      <video src="img/evento-pelotero.mp4" poster="img/evento-pelotero-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Pelotero blanco armado"></video>
-      <img src="img/evento-rafa-dulces.jpg" alt="Ambientación con mesa dulce y pelotero" loading="lazy">
-      <img src="img/evento-pelotero-blanco.jpg" alt="Pelotero blanco con tobogán y bloques" loading="lazy">
-      <img src="img/evento-rafa-armado.jpg" alt="Ambientación con paneles, globos y cilindros" loading="lazy">
-      <img src="img/evento-rafa-mesa.jpg" alt="Mesa de cumpleaños con torta temática" loading="lazy">
-      <img src="img/evento-rafa-lateral.jpg" alt="Ambientación con arco de globos" loading="lazy">
-      <img src="img/evento-rafa-salon.jpg" alt="Ambientación armada en el salón" loading="lazy">
-      <img src="img/combo-b.jpg" alt="Combo plaza pelotero premium" loading="lazy">
+      <video data-src="img/evento-pelotero.mp4" poster="img/evento-pelotero-poster.webp" muted loop playsinline preload="none" aria-label="Pelotero blanco armado"></video>
+      <img src="img/evento-rafa-dulces.webp" alt="Ambientación con mesa dulce y pelotero" loading="lazy">
+      <img src="img/evento-pelotero-blanco.webp" alt="Pelotero blanco con tobogán y bloques" loading="lazy">
+      <img src="img/evento-rafa-armado.webp" alt="Ambientación con paneles, globos y cilindros" loading="lazy">
+      <img src="img/evento-rafa-mesa.webp" alt="Mesa de cumpleaños con torta temática" loading="lazy">
+      <img src="img/evento-rafa-lateral.webp" alt="Ambientación con arco de globos" loading="lazy">
+      <img src="img/evento-rafa-salon.webp" alt="Ambientación armada en el salón" loading="lazy">
+      <img src="img/combo-b.webp" alt="Combo plaza pelotero premium" loading="lazy">
     </div>
   </div>
 </section>
@@ -166,7 +178,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Carrusel de ROL: las fotos se cambian en js/config.js (fotosRol) -->
     <div class="rol-foto" id="carrusel-rol" aria-label="Fotos de eventos de ROL"></div>
     <div>
-      <img class="rol-logo" src="img/rol-logo.jpg" alt="ROL Vajilla y Eventos" loading="lazy">
+      <img class="rol-logo" src="img/rol-logo.webp" alt="ROL Vajilla y Eventos" loading="lazy">
       <span class="kicker">¿Organizás un evento completo?</span>
       <h2 class="title">También somos ROL Vajilla y Eventos</h2>
       <p class="lead">Especialistas en alquiler de mobiliario, vajilla, livings, carpas y equipamiento para eventos.</p>
@@ -228,7 +240,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer>
   <div class="wrap">
-    <img src="img/logo.png" alt="Petits Ambientaciones">
+    <img src="img/logo.webp" alt="Petits Ambientaciones" width="300" height="262" loading="lazy">
     <span>© <span id="anio"></span> Petits Ambientaciones · Ambientaciones y espacios de juego para niños</span>
   </div>
 </footer>

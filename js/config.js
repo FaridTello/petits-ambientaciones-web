@@ -9,9 +9,9 @@ export const CONFIG = {
   direccionMapa: "Santiago del Estero 1348, Tigre, Buenos Aires, Argentina", // lo que busca Google Maps
   rolWeb: "https://vajillayeventos.com.ar/",   // web de ROL Eventos (sección "También somos ROL")
   rolInstagram: "rol.vajillayeventos",          // Instagram de ROL (sin @)
-  fotosPortada: ["portada.jpg", "pelotero-2x4.jpg", "combo-b.jpg", "plaza-tipi.jpg"], // carrusel del inicio (carpeta img/)
+  fotosPortada: ["portada.webp", "pelotero-2x4.webp", "combo-b.webp", "plaza-tipi.webp"], // carrusel del inicio (carpeta img/)
   segundosPorFoto: 4,
-  fotosRol: ["rol-1-mesa-pileta.jpg", "rol-2-carpa-barra.jpg", "rol-3-living-muelle.jpg", "rol-4-carpa-noche.jpg", "rol-5-living-noche.jpg", "rol-6-living-madera.jpg", "rol-7-carpa-doble.jpg"], // carrusel de la sección ROL
+  fotosRol: ["rol-1-mesa-pileta.webp", "rol-2-carpa-barra.webp", "rol-3-living-muelle.webp", "rol-4-carpa-noche.webp", "rol-5-living-noche.webp", "rol-6-living-madera.webp", "rol-7-carpa-doble.webp"], // carrusel de la sección ROL
   mostrarPrecios: false,              // el cliente pidió NO mostrar precios. true = los muestra
   mensajeWhatsApp: "¡Hola! Vi la web de Petits y quería consultar por "
 };
